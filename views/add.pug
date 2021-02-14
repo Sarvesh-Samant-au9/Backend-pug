@@ -1,0 +1,27 @@
+
+//- extends layout
+
+//- block content 
+//-     h1 King Added
+//-     ul 
+//-       li Sarvesh
+//-       li Samant
+//-       li is
+//-       li Back 
+
+extends layout
+block content
+  center 
+    h1 #{title} 
+  form(action="/articles/add", method = "POST")
+    .form-group
+      label(for="title") Title:-
+      input.form-control(type="text", name= "title", id="title")
+    //- .form-group
+    //-   label(for="author") Author:
+    //-   input.form-control(type="text", name = "author", id = "author") 
+    .form-group
+      label(for="author") Body:
+      textarea.form-control(name="body")
+    br
+    input.btn.btn-primary(type="submit", value="Submit")

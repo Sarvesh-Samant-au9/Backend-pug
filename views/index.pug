@@ -1,0 +1,25 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-   body
+//-     h1 Sarvesh Pug is Ready
+//-     ul 
+//-       li Sarvesh
+//-       li Pug
+//-       li is Ready
+//-     h1 #{title}
+
+
+//-       //- Pug works on indentation
+extends layout 
+
+block content 
+  h1 #{title}
+  ul.list-group
+    each article, i in articles 
+      li.list-group-item
+        a(href="/articles/"+article._id)= article.title

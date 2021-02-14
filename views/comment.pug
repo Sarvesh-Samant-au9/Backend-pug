@@ -1,0 +1,11 @@
+extends layout
+block content
+  h5 #{commentElement} 
+  if user
+    form(action=`/articles/comment/${article._id}` method = "POST")
+      .form-group
+        label(for="comment") Write A comment:
+        textarea.form-control(name="comment" id="comment")
+      br
+      br
+      input.btn.btn-success(type="submit",value="Submit")
